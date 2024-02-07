@@ -95,12 +95,12 @@ public class Main {
                 .limit(2)
                 .forEach(System.out::println);*/
 
-       /* Integer i = employees.stream()
+        Integer i = employees.stream()
                 .map(Employee::getAge)
-                .reduce(Integer::max)
+                .reduce((a, b) -> Integer.max(a, b))
                 .get();
 
-        System.out.println(i);*/
+        System.out.println(i);
 
         /*String s = employees.stream()
                 .map(Employee::getFirstName)
@@ -109,9 +109,9 @@ public class Main {
 
         System.out.println(s);*/
 
-        employees.stream()
+        /*employees.stream()
                 .peek(employee -> employee.setFirstName("Adam"))
-                .forEach(System.out::println);
+                .forEach(System.out::println);*/
 
     }
 }
